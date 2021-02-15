@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- NOTE: Normally I would import any CSS or JS but given the need for ease of use I will include all in single file format. -->
+    <!-- NOTE: I would also normally use a different framework for faster mock building - but since bootstrap is the prefered framework for the team I opted to give it a shot. -->
+
+    <title>Camping World | RV & Outdoors</title>
+  </head>
+  <body>
+    <!-- Nav Bar Mobile & Tablet -->
+    <nav class="navbar navbar-dark navbar-expand-lg d-block d-md-block d-lg-none" style="background-color: #00669e;">
+        <div class="container-fluid my-1">
+            <i class="fas fa-bars"></i>
+            <img src="CW_RV_Outdoors_White_Horz.svg" alt="Camping World" class="camp-logo" />
+            <i class="fas fa-phone nav-icons mx-2" alt="Call"></i>
+            <i class="far fa-heart nav-icons mx-2" alt="Follow"></i>
+            <i class="fas fa-search nav-icons mx-2" alt="Search"></i>
+        </div>
+      </nav>
+    <!-- Nav Desktop -->
+    <nav class="navbar navbar-dark navbar-expand-lg d-md-none d-sm-none d-none d-lg-block mx-auto" style="background-color: #00669e; max-width:1500px;">
+      <div class="container-fluid my-1 text-white">
+          <img src="CW_RV_Outdoors_White_Horz.svg" alt="Camping World" class="camp-logo ms-5" />
+          <i class="far fa-heart nav-icons mx-2" alt="Follow"></i> <span>Favorites</span>
+          <span class="mx-5">Find a Location</span> 
+      </div>
+    </nav>
+    
+    <div class="app-container bg-white mx-auto" style="max-width:1500px;">
+
+      <!-- desktop banner nav -->
+      <div class="shadow d-none d-lg-block " style="height: 60px;">
+        <div class="row mx-2 ms-5">
+          <div class="col my-2">
+            <button type="button" class="btn active-link heavy-text">
+              Shop RVs <span class="fas fa-caret-down ms-4"></span>
+            </button>
+            <button type="button" class="btn active-link heavy-text">
+              Shop Gear <span class="fas fa-caret-down ms-4"></span>
+            </button>
+            <button class="d-inline-block mx-1 heavy-text active-link btn">Sell My RV</button>
+            <button class="d-inline-block mx-1 heavy-text active-link btn">Financing</button>
+            <button class="d-inline-block mx-1 heavy-text active-link btn">RV Services</button>
+            <button type="button" class="btn active-link heavy-text">
+              Resources <span class="fas fa-caret-down ms-4"></span>
+            </button>
+          </div>
+
+            <div class="col-3 mt-3">
+              <div class="input-group mb-3" style="width:90%;" >
+                <input type="text" class="form-control form-rounded search-bar" placeholder="Search by Make, Brand, Model or Stock Number" aria-label="Search by Make, Brand, Model or Stock Number" aria-describedby="basic-addon2">
+                <span class="input-group-text form-rounded text-white search-icon" style="background-color:#00669e;" id="basic-addon2"><i class="fas fa-search" style="margin-left: -9px;"></i></span>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Brand Image Container -->
+      <div class="container-fluid mx-0 px-0 brand-img-container">
+          <img src="brand-img.jpg" class="img-fluid brand-img" alt="Brand Image" />
+      </div>
+
+      <!-- Shop Brand Container -->
+
+      <!-- Mobile -->
+      <div class="shadow pb-2 shop-brand-container d-sm-block d-md-none">
+          <div class="d-grid gap-2 mx-3">
+            <img src="cougar-logo.png" class="img-fluid px-5 my-0" alt="Brand Logo" /> <!-- NOTE: This is a good place to put a variable (Ie. brand.logo) for reusability of the template-->
+          </div>
+          <div class="d-grid gap-2 mx-3 mb-1">
+              <button type="button" class="btn btn-warning btn-lg shop-btn">Shop The Brand</button>
+          </div>
+      </div>
+
+      <!-- tablet -->
+      <div class="shadow pb-2 d-none d-md-block d-lg-block px-3" style="height: 100px;">
+        <div class="d-flex flex-row">
+          <div class="col" style="position:relative;text-align:right;">
+            <img src="cougar-logo.png" class="img-fluid my-auto large-logo" alt="Brand Logo" />
+
+          </div>
+          <div class="col-7 mt-4 pt-2 text-center">
+            <a href="#about" rel="" id="anchor1"><button class="d-inline-block mx-1 heavy-text active-link btn ">About</button></a>
+            <a href="#photo" rel="" id="anchor2"><button class="d-inline-block mx-1 heavy-text active-link btn ">Photo Gallery</button></a>
+            <button class="d-inline-block mx-1 heavy-text active-link btn ">Features</button>
+            <button class="d-inline-block mx-1 heavy-text active-link btn ">Brand Models</button>
+          </div>
+          <div class="col mt-4 pt-2 text-center">
+            <button type="button" class="btn btn-warning heavy-text shop-btn">Shop The Brand</button>
+          </div>
+        </div>
+      </div>
+
+    
+      <!-- Brand About Section -->
+      <!-- mobile -->
+      <a name="about" id="about"></a>
+      <div class="container-fluid mx-auto mt-5 d-sm-block d-md-none">
+          <p class="px-1 display-5" style="font-weight:600;">About Keystone <br/> Cougar</p><!-- NOTE: Same as above - a lot of great opportunities for reusability here through template variables. -->
+          <p class="px-1 py-2 heavy-text">Keystone Cougar fifth wheels deliver a refined collection of the most livable, full-profile floorplans at ultra-towable lengths. Standard features like MaxTurn Technology™, Road Armor™, and HitchVision™ deliver unparalleled towing control, and innovations like iN-Command® smart RV control system and Climate Guard™ all-season protection make Cougar a winning choice for full-time and extended-stay camping.</p>
+      </div>
+      <div class="container-fluid mx-auto mb-5 d-sm-block d-md-none">
+          <div class="card video-card mx-auto">
+              <img src="maxresdefault.jpg" class="card-img" alt="About Video" />
+              <div class="card-img-overlay" style="position:relative;">
+                  <i class="card-title far fa-play-circle play-mbl"></i>
+              </div>
+          </div>
+      </div>
+      <!-- tablet -->
+      <div class="container mx-auto mt-5 mb-5 pb-5 d-none d-md-block">
+        <div class="row">
+          <div class="col mt-5">
+            <p class="px-3 h3 mb-5 pb-2" style="text-align: right;">About Keystone Cougar</p>
+            <div class="card video-card ms-auto">
+              <img src="maxresdefault.jpg" class="card-img" alt="About Video" />
+              <div class="card-img-overlay" style="position:relative;">
+                <img src="play-button.svg" class="card-title play-btn" />
+                  <!-- <i class="card-title far fa-play-circle play-btn"></i> -->
+              </div>
+          </div>
+          </div>
+          <div class="col mt-5"> 
+            <p class="px-1 py-2 heavy-text">Keystone Cougar fifth wheels deliver a refined collection of the most livable, full-profile floorplans at ultra-towable lengths. Standard features like MaxTurn Technology™, Road Armor™, and HitchVision™ deliver unparalleled towing control, and innovations like iN-Command® smart RV control system and Climate Guard™ all-season protection make Cougar a winning choice for full-time and extended-stay camping.</p>
+          </div>
+          
+        </div>
+      </div>
+    <div class="container-fluid mx-auto mb-5">
+
+    </div>
+      <!-- Photo Gallery -->
+      <a name="photo" id="photo"></a>
+      <div class="container colored-container pb-3 px-4">
+          <!-- desktop -->
+          <div class="row d-lg-flex d-none d-sm-none d-md-none pt-5" style="margin-bottom:-250px;">
+            
+            <div class="col-3">
+              <div class="my-2 img-container pt-2 pb-3">
+                <a class="pop">
+                  <div class="overlay-container">
+                    <img src="gallery-1.jpg" class="gallery-img" alt="Interior Bedroom">
+                    <div class="overlay">
+                      <i class="fas fa-plus-circle"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="row">
+                <div class="my-2 img-container pt-2" style="height:360px;">
+                  <a class="pop">
+                    <div class="overlay-container ">
+                      <img src="gallery-2.jpg" class="gallery-img " alt="Interior Living room Option 1">
+                      <div class="overlay">
+                        <i class="fas fa-plus-circle"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="my-2 img-container pt-2" style="height:360px;">
+                  <a class="pop">
+                    <div class="overlay-container ">
+                      <img src="gallery-6.jpg" class="gallery-img " alt="Interior Bathroom">
+                      <div class="overlay">
+                        <i class="fas fa-plus-circle"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="col-6">
+              <div class="row">
+                <div class="my-2 img-container pt-2" style="height:360px;">
+                  <a class="pop">
+                    <div class="overlay-container ">
+                      <img src="gallery-5.jpg" class="gallery-img " alt="Interior Living room Option 1">
+                      <div class="overlay">
+                        <i class="fas fa-plus-circle"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+              
+                <div class="my-2 img-container pt-2 pb-1 col" style="height:360px;">
+                  <a class="pop">
+                    <div class="overlay-container ">
+                      <img src="gallery-4.jpg" class="gallery-img " alt="Interior Living room Option 1">
+                      <div class="overlay">
+                        <i class="fas fa-plus-circle"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="my-2 img-container pt-2 pb-1 col" style="height:360px;">
+                  <a class="pop">
+                    <div class="overlay-container ">
+                      <img src="gallery-3.jpg" class="gallery-img " alt="Interior Living room Option 1">
+                      <div class="overlay">
+                        <i class="fas fa-plus-circle"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+              
+            </div>
+
+          </div>
+          <!-- mobile & tablet -->
+          <div class="row d-lg-none">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-12.jpg" class="gallery-img py-2" alt="Interior Bedroom"></a></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-2.jpg" class="gallery-img py-2" alt="Interior Living room Option 1"></a></div>
+            </div>
+
+            <div class="col-lg-6 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-3.jpg" class="gallery-img py-2" alt="Interior Living Room Option 2"></a></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-4.jpg" class="gallery-img py-2" alt="Interior Living Room Option 3"></a></div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-5.jpg" class="gallery-img py-2" alt="Interior Kitchen"></a></div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+              <div class="my-2 img-container"><a class="pop"><img src="gallery-6.jpg" class="gallery-img py-2" alt="Interior Bathroom"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="div d-none d-lg-block" style="height: 300px;background-color:white;margin-left:0;margin-right:0;"></div>
+
+
+        <!-- Why Customers Are Choosing Brand Section-->
+        <!-- NOTE: This sections is one of the biggest benefitors of DRY, if hooked up to an API: this section could easily be made with only one templated component iterating on objects returned from the API. -->
+        <!-- An example of this could be (conceptually as follows): <div> <i> <h4> $pointTitle </h4> <p> $pointDescription </p> and have the div iterated on the return for each object.-->
+        <div class="container colored-container pb-5 px-4 mt-5">
+          <div class="row pt-5">
+            <div class="col-lg-6 me-auto col-md-8 col-sm-12">
+              <div class="row h-50 d-none d-lg-block"></div>
+              <p class=" display-5 pt-5" style="font-weight:600;">Why Customers are Choosing <span class="highlight-text">Keystone</span></p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <i class="far fa-check-circle check-icon py-3"></i>
+              <h4 class="mb-2">Keystone Innovation</h4>
+              <p>Keystone is constantly creating new advancements into making RVs better built, like Tuf-Lok A/C duct joiners, in-floor heating ducts, and Tru-Fit slide construction.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" class="my-4">
+              <i class="far fa-check-circle check-icon py-3"></i>
+              <h4 class="mb-2">Best Structural Warranty</h4>
+              <p>Relax as you camp! Your Keystone is covered with an industry-best 3-year limited structural warranty that includes the main steel frame, front & rear walls, floor and a lot more.</p>
+            </div>
+            <div class="col-lg-3 ms-auto col-md-6 col-sm-12" class="my-4">
+              <i class="far fa-check-circle check-icon py-3"></i>
+              <h4 class="mb-2">Parts on Hand</h4>
+              <p>Keystone understands you want issues fixed ASAP. That's why they have more than 100,000 parts in stock with most able to get to your authorized service center within 48 hours.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" class="my-4">
+              <i class="far fa-check-circle check-icon py-3"></i>
+              <h4 class="mb-2">Color-Coded Wiring</h4>
+              <p>Keystone has placed their wiring in bright colors, taking the hassle out of trying to locate what wires goes where so you can quickly fix your electrical or entertainment issues.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >           
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+    </div>
+  </body>
+  <script>
+    // function to open modal with image selected
+    $(function() {
+        $('.pop').on('click', function() {
+          $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+          $('#imagemodal').modal('show');   
+        });		
+    });
+  </script>
+  <script>
+    // function to toggle overlay to desktop image gallery
+    $(".img-container").hover(
+      function(){
+          $(".overlay", this).css("display", "block");
+      }, function(){
+          $(".overlay", this).css("display", "none");
+    });
+  </script>
+  <style>
+    body {
+      background-color: #00669e;
+    }
+      .brand-primary {
+        color: #00669e; /* With this color being a brand color - and used very often, this would be a good opportunity for scss varibles Ie. $brand-primary */
+      }
+      .fa-bars {
+          color: white;
+          font-size: 22px;
+      }
+      .brand-img-container {
+        height: 300px;
+        width: auto;
+      }
+      .brand-img-container img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .shop-brand-container {
+        height: 20%;
+      }
+      .large-logo {
+        width: 177px;
+      }
+      .play-btn {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -40px;
+        left: 5px;
+      }
+      .play-btn:hover {
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+      }
+      .play-mbl {
+          color: #f1be48;
+          font-size: 50px;
+          position: absolute;
+          bottom: 10px;
+          left: 4px;
+      }
+      .play-mbl:hover {
+        font-size: 52px;
+        cursor: pointer;
+      }
+      .nav-icons {
+          color: white;
+      }
+      .form-rounded {
+        border-radius: 1rem;
+      }
+      .search-bar {
+        background-color: rgba(244, 249, 253, 1);
+        border: none;
+        height: 30px;
+      }
+      .search-icon {
+        width: 20px;
+      }
+      .form-control::-webkit-input-placeholder {
+        font-size: 12px;
+      }
+      .camp-logo {
+          vertical-align: baseline;
+          margin-left: 40px;
+          margin-right: auto;
+          padding: 0;
+          height: 30px;
+          width: auto;
+      }
+      .heavy-text {
+          font-weight: 500;
+      }
+      .card-img {
+        height: 125px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 5.5%;
+      }
+      .video-card {
+        border: none;
+        max-width: 350px;
+      }
+      .colored-container {
+          background-color: #00669e;
+          color: white;
+      }
+      .img-container {
+        position:relative;
+        height: 100%;
+      }
+      .gallery-img {
+        height: 100%;
+        width: 100%;
+      }
+      .gallery-img:hover {
+        cursor: pointer;
+      }
+      .highlight-text {
+        color: #f1be48;
+      }
+      .check-icon {
+        font-size: 22px;
+      }
+      .active-link:hover {
+        color: #00669e;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      
+      /* Desktop Breakpoint */
+      @media (min-width: 992px) {
+        .video-card {
+          border: none;
+          height: 200px;
+          max-width: 550px;
+        }
+        .card-img {
+          height: 210px;
+          border-radius: 3.5%;
+        }
+        .colored-container {
+          width: 100%;
+          max-width: 100%;
+        }
+        .camp-logo {
+          vertical-align: baseline;
+          margin-left: 40px;
+          margin-right: auto;
+          padding: 0;
+          height: 40px;
+          width: auto;
+        }
+        .shop-btn {
+          width: 70%;
+        }
+        .play-btn {
+          height: 100px;
+          width: 100px;
+          position: absolute;
+          top: -85px;
+          left: -10px;
+        }
+        .play-btn:hover {
+          height: 110px;
+          width: 110px;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+        }
+        .gallery-img {
+          object-fit: cover;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          width:100%;
+          height:100%;
+          left: 0;
+          background-color:#000;
+          opacity:0.5;
+          z-index: 100;
+          display: none;
+        }
+        .overlay:hover {
+          cursor: pointer;
+        }
+        .overlay-container {
+          position: relative;
+          height: 100%;
+        }
+        .fa-plus-circle {
+          position: absolute;
+          top: 50%;
+          left: 45%;
+          font-size: 50px;
+          color: white;
+        }
+
+      }
+
+  </style>
+</html>
